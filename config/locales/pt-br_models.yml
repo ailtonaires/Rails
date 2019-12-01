@@ -1,0 +1,24 @@
+"pt-BR":
+  activerecord:
+    models:
+      manager: Gerentes
+      user: Usuários
+      product: Produto
+      attributes:
+
+        manager:
+          email: "Email"
+          password: "Senha"
+
+          product: 
+            name: "Nome"
+            amount: "Quantidade"
+            value: "Valor"
+
+            user:
+              email: "Email"
+              encrypted_password: "Senha"
+
+
+
+      # will translate User attribute "login" as "Handle"
