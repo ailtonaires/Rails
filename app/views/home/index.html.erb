@@ -3,14 +3,14 @@
 
 <% if !user_signed_in? %>
 <ul>
-	<li><%=link_to "Novo usuário", new_user_registration_path%></li>
 	<li><%=link_to "Logar", new_user_session_path %></li>
+	<li><%=link_to "Novo usuário", new_user_registration_path%></li>
 </ul>
 
 <% end %>
 
 <ul>
-	<li><%=link_to "Usuários", managers_path%></li>
-	<li><%=link_to "Estoque", products_path%></li>
+	<li><%=link_to "Clientes", clients_path%></li>
+	<li><%=link_to "Pedidos", products_path%></li>
 </ul>
 

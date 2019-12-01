@@ -1,32 +1,28 @@
 <%- model_class = Product -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1> Pedidos </h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:amount) %></th>
-      <th><%= model_class.human_attribute_name(:value) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= model_class.human_attribute_name(:Cliente) %></th>
+      <th><%= model_class.human_attribute_name(:Quantidade) %></th>
+      <th><%= model_class.human_attribute_name(:Valor) %></th>
+      <th><%=t '.actions', :default => t("helpers.Ações") %></th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= link_to product.id, product_path(product) %></td>
         <td><%= product.name %></td>
         <td><%= product.amount %></td>
         <td><%= product.value %></td>
-        <td><%=l product.created_at %></td>
         <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
+          <%= link_to t('.show', :default => t("helpers.links.ver")),
                       product_path(product), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => t("helpers.links.editar")),
                       edit_product_path(product), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.destroy', :default => t("helpers.links.excluir")),
                       product_path(product),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
@@ -37,6 +33,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.new', :default => t("helpers.links.novo")),
             new_product_path,
             :class => 'btn btn-primary' %>

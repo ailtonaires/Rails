@@ -1,30 +1,26 @@
 <%- model_class = Manager -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Usuários</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:password) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= model_class.human_attribute_name(:Nome) %></th>
+      <th><%= model_class.human_attribute_name(:Telefone) %></th>
+      <th><%=t '.actions', :default => t("helpers.Ações") %></th>
     </tr>
   </thead>
   <tbody>
     <% @managers.each do |manager| %>
       <tr>
-        <td><%= link_to manager.id, manager_path(manager) %></td>
         <td><%= manager.email %></td>
         <td><%= manager.password %></td>
-        <td><%=l manager.created_at %></td>
         <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
+          <%= link_to t('.show', :default => t("helpers.links.Ver")),
                       manager_path(manager), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => t("helpers.links.edita")),
                       edit_manager_path(manager), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.destroy', :default => t("helpers.links.apagar")),
                       manager_path(manager),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
