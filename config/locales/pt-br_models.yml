@@ -1,14 +1,14 @@
 "pt-BR":
   activerecord:
     models:
-      manager: Gerentes
+      manager: Clientes
       user: Usuários
       product: Produto
       attributes:
 
         manager:
-          email: "Email"
-          password: "Senha"
+          email: "Nome"
+          password: "Telefone"
 
           product: 
             name: "Nome"
