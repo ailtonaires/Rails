@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estoque</h1>
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custo</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compra</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validade</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nota</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estoques.each do |estoque| %>
+      <tr>
+        <td><%= estoque.produto %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= estoque.quantidade%></td>
+        <td>&nbsp;&nbsp;&nbsp;<%= estoque.custo %></td>
+        <td>&nbsp;&nbsp;&nbsp;<%= estoque.compra %></td>
+        <td>&nbsp;&nbsp;&nbsp;<%= estoque.validade %></td>
+        <td>&nbsp;&nbsp;&nbsp;<%= estoque.nota %></td>
+
+        <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Ver', estoque %></td>
+        <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Editar', edit_estoque_path(estoque) %></td>
+        <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Destruir', estoque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Produto', new_estoque_path %>

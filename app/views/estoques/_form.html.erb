@@ -1,0 +1,48 @@
+<%= form_for(estoque) do |f| %>
+  <% if estoque.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(estoque.errors.count, "error") %> prohibited this estoque from being saved:</h2>
+
+      <ul>
+      <% estoque.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :produto %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <%= f.text_field :produto %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantidade %>
+    <%= f.text_field :quantidade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :custo %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :custo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :compra %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.date_select :compra %>
+  </div>
+
+  <div class="field">
+    <%= f.label :validade %> &nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.date_select :validade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nota %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :nota %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
