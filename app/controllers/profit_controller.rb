@@ -7,5 +7,7 @@ class ProfitController < ApplicationController
 		@total_itens = 0
 		@vendas.each {|product| @total_itens += product.amount}
 
+		@profit = @total - (@total_itens * 0.75)
+
 	end
 end

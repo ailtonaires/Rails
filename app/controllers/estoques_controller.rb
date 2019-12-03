@@ -1,4 +1,5 @@
 class EstoquesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_estoque, only: [:show, :edit, :update, :destroy]
 
   # GET /estoques
@@ -71,4 +72,4 @@ class EstoquesController < ApplicationController
     def estoque_params
       params.require(:estoque).permit(:produto, :quantidade, :custo, :compra, :validade, :nota)
     end
-end
+  end
