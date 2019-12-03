@@ -7,29 +7,38 @@
 
 ## A proposta  
  O cliente precisa de uma aplicação que traga funcionalidades um tanto quanto práticas e que minimize seu trabalho árduo de cálculos e anotações físicas. Suas funcionalidades devem atender a todos os requisitos com bastante fluidez. Com o objetivo de ter um front-end bastante amigável e um back-end limpo e eficiente, isso deixará toda a aplicação segura e agradável para sua utilização.
- 
- 
-## Requisitos 
-1. Abrir em servidor local
-2. Cadastro de produtos
-3. Pedidos de clientes
-4. Possuir front-end prático
-5. Gerar relatórios
- 
+  
 
 ## Tecnologias 
 1. Linguagem
 
- * Ruby
+ * Ruby 2.2.4
+ * Nodejs 8.10.0
 2. Frameworks 
 
-  * Rails
-  * Bootstrap
+  * Rails 5.0.7.2
+  * Bootstrap 4
 3. Banco de Dados
 
-  * SQlite3
+  * SQlite3 1.3.6
+4. Outras Tecnologias
+  * Bundle 2.0.2
+  * Yarn 1.19.1
+  * Git 2.17.1
 
 ## Funcionalidades
 * Cadastro de Estoque
 * Cadastrar um produto
-* Vendas
+* Cadastro de Clientes
+* Relatórios de Vendas
+
+## Comandos no terminal
+  * Clonar o repositório
+      * git clone https://github.com/ailtonaires/Rails.git
+
+  * Rodar o banco de Dados
+      * rake db:migrate
+  * Inicializar o servidor
+      * rails s
+      * http://localhost:3000 (No navegador)
+ 
