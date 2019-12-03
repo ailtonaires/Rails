@@ -1,3 +1,3 @@
 class Manager < ApplicationRecord
-    has_many :clients
+   has_many :clients
 end

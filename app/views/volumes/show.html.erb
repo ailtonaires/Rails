@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @volume.nome %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @volume.quantidade %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @volume.valor %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @volume.data %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @volume.nota %>
+</p>
+
+<%= link_to 'Editar', edit_volume_path(@volume) %> |
+<%= link_to 'Voltar', volumes_path %>

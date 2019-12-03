@@ -13,9 +13,8 @@
 
   <div class="field">
     <%= f.label :produto %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    <%= f.text_field :produto %>
-  </div>
+    <%= select("estoque", "produto", ['Farinha', 'Leite', 'Óleo', 'Presunto', 'Queijo', 'Frango', 'Salsicha', 'Fermento', 'Açúcar', 'Requeijão'], {include_blank: "Selecione o Produto"}) %>
+    </div>
 
   <div class="field">
     <%= f.label :quantidade %>

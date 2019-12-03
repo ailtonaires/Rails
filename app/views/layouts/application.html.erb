@@ -48,7 +48,7 @@
       <a class="navbar-brand" href="#">Salgados João e Maria</a>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Home", home_index_path  %></li>
+          <li><%= link_to "Página Inicial", home_index_path  %></li>
           <% if user_signed_in? %>
           <li><%=link_to "Sair", destroy_user_session_path, method: :delete%>
           </li>
@@ -71,8 +71,7 @@
           <ul class="nav nav-list">
             <li class="nav-header"></li>
             <li><%= link_to "Relatório", profit_all_path %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "Agenda Semanal", "/path2"  %></li>
           </ul>
         </div><!--/.well -->
       </div><!--/span-->

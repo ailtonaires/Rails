@@ -1,0 +1,42 @@
+<%= form_for(volume) do |f| %>
+  <% if volume.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(volume.errors.count, "error") %> prohibited this volume from being saved:</h2>
+
+      <ul>
+      <% volume.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= select("volume", "nome", ['Médio', 'Grande'], {include_blank: "Selecione o tipo"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantidade %>&nbsp;&nbsp;
+    <%= f.number_field :quantidade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valor %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :valor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :data %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.date_select :data %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nota %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :nota %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

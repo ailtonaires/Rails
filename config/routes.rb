@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :volumes
+  resources :produtos
   resources :estoques
   resources :clients
 	get 'profit/all'
