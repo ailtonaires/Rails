@@ -4,6 +4,13 @@
 	<li> <%="Total de Salgados vendidos: #{@total_itens}" %></li>
 	<li> <%="Valor total R$:#{@total}" %></li>
 	<li> <%="Lucro R$:#{@profit}" %></li>
+
+	<% if @all_estoque >= 0 %>
+	<li><%="Quantidade de Salgados em Estoque: #{@all_estoque}" %></li>
+	<%else%>
+	<li><%="Quantidade de Salgados em Estoque: #{0}" %></li>
+	<li><%="Você precisa fabricar #{@all_estoque *(-1)} Salgados." %></li>
+	<% end %>
 	
 </ul>
 
