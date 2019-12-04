@@ -14,7 +14,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.name %></td>
+        <td><%= product.client.name %></td>
         <td><%= product.amount %></td>
         <td><%= product.value %></td>
         <td>
